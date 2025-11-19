@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Tactics 3v3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
+      body {
+        font-family: 'Rajdhani', sans-serif;
+        background-color: #0f172a;
+        color: #e2e8f0;
+        overflow: hidden;
+      }
+      /* Custom scrollbar for logs */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1e293b;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #475569;
+        border-radius: 3px;
+      }
+
+      /* Animations */
+      .animate-breathe {
+        animation: breathe 3s infinite ease-in-out;
+      }
+      @keyframes breathe {
+        0%, 100% { transform: translateY(0) scaleY(1); }
+        50% { transform: translateY(-2px) scaleY(1.02); }
+      }
+
+      .animate-lunge-right {
+        animation: lungeRight 0.4s forwards ease-in-out;
+      }
+      @keyframes lungeRight {
+        0% { transform: translateX(0); }
+        50% { transform: translateX(40px) scale(1.1); }
+        100% { transform: translateX(0); }
+      }
+
+      .animate-lunge-left {
+        animation: lungeLeft 0.4s forwards ease-in-out;
+      }
+      @keyframes lungeLeft {
+        0% { transform: translateX(0); }
+        50% { transform: translateX(-40px) scale(1.1); }
+        100% { transform: translateX(0); }
+      }
+
+      .animate-shake {
+        animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+      }
+      @keyframes shake {
+        10%, 90% { transform: translate3d(-1px, 0, 0); }
+        20%, 80% { transform: translate3d(2px, 0, 0); }
+        30%, 50%, 70% { transform: translate3d(-4px, 0, 0); filter: brightness(2) sepia(1) hue-rotate(-50deg) saturate(5); }
+        40%, 60% { transform: translate3d(4px, 0, 0); }
+      }
+      
+      .perspective-container {
+        perspective: 1000px;
+      }
+      .arena-floor {
+        transform: rotateX(20deg) scale(0.9);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

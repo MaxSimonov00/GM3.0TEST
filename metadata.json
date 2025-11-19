@@ -1,0 +1,5 @@
+{
+  "name": "Hero Tactics 3v3",
+  "description": "A turn-based strategy game where speed determines turn frequency. 3 Heroes vs 3 Enemies.",
+  "requestFramePermissions": []
+}
